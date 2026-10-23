@@ -5,8 +5,8 @@ import AdminPanel from "./components/AdminPanel";
 import AuthScreen from "./components/AuthScreen";
 import "./App.css";
 
-const API_URL = "http://localhost:5000/api/auth";
-const WATCHES_API_URL = "http://localhost:5000/api/watches";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/auth`;
+const WATCHES_API_URL = `${import.meta.env.VITE_API_URL}/api/watches`;
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
