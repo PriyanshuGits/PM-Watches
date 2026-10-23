@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const WATCHES_API_URL = "http://localhost:5000/api/watches";
+const WATCHES_API_URL = `${import.meta.env.VITE_API_URL}/api/watches`;
 
 export default function AdminPanel({ watches, setWatches, onClose }) {
   const [editingId, setEditingId] = useState(null);
