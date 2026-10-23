@@ -30,9 +30,8 @@ const createToken = (user) => {
 const setAuthCookie = (res, token) => {
   res.cookie("pm_auth", token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure:
-      process.env.NODE_ENV === "production",
+    sameSite: "none",
+    secure: true,
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
 };
